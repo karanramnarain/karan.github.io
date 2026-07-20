@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Karan's Portfolio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo"><a href="index.html">Karan's Portfolio</a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="contact-main">
+    <h1>Contact</h1>
+    <p>Heb je een vraag of wil je contact opnemen? Gebruik onderstaande gegevens of het formulier.</p>
+
+    <div class="contact-info">
+      <div class="contact-info-item">
+        <span class="contact-label">Telefoon / WhatsApp</span>
+        <a href="https://wa.me/5978990835">+597 8990835</a>
+      </div>
+      <div class="contact-info-item">
+        <span class="contact-label">Email</span>
+        <a href="mailto:karanramnarain820@gmail.com">karanramnarain820@gmail.com</a>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <label for="name">Naam</label>
+      <input type="text" id="name" name="name" placeholder="Uw naam">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Uw email">
+
+      <label for="phone">Nummer</label>
+      <input type="tel" id="phone" name="phone" placeholder="Uw telefoonnummer">
+
+      <label for="message">Bericht</label>
+      <textarea id="message" name="message" rows="6" placeholder="Uw bericht"></textarea>
+
+      <button type="submit">Verstuur</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>2026 &copy; Karan's Portfolio</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

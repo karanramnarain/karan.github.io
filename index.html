@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Title</title>
-    <!-- Link external CSS stylesheet here -->
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan's Portfolio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <h1>Hello, World!</h1>
-    <p>This is a basic HTML template.</p>
+    <nav class="navbar">
+        <div class="nav-logo"><a href="index.html">Karan's Portfolio</a></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
 
-    <!-- Link external JavaScript file here -->
-    <script src="script.js"></script>
+      <section class="hero" id="home">
+        <div class="hero-image">
+          <img src="img/karan-profile.jpg" alt="Profile photo">
+        </div>
+        <div class="hero-text">
+          <h1>Hallo, Ik ben Karan&nbsp;Ramnarain</h1>
+          <p>Momenteel volg ik de opleiding Software Engineering aan UNASAT, na eerder mijn opleiding tot assistent-accountant te hebben afgerond. In mijn vrije tijd hou ik van zwemmen, voetballen, basketballen en dammen.</p>
+          <div class="hero-buttons">
+            <a href="work.html" class="btn btn-primary">Work</a>
+            <a href="about.html" class="btn btn-secondary">Read more</a>
+          </div>
+        </div>
+      </section>
+
+  <main>
+    <!-- Main content goes here -->
+  </main>
+
+  <footer>
+    <p>2026 &copy; Karan's Portfolio</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
 </body>
 </html>

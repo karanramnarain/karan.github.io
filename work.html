@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work - Karan's Portfolio</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo"><a href="index.html">Karan's Portfolio</a></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <main class="work-main">
+    <h1>Work</h1>
+    <p>Een overzicht van projecten waar ik als onderdeel van mijn studie aan Software Engineering aan heb meegewerkt.</p>
+
+    <div class="project-card">
+      <h2>Fibonacci - Slimme gevels voor duurzame gebouwen</h2>
+
+      <p>Een studieproject aan UNASAT gericht op een innovatieve, duurzame oplossing voor het groeiende probleem van warmte- en energieverbruik in gebouwen. Het project draait om een slimme gevel die automatisch reageert op omgevingsfactoren zoals zonlicht, temperatuur en luchtkwaliteit.</p>
+      <p>Mijn bijdrage lag vooral bij de technische kant: ik heb gewerkt aan het aansturen van de machine met de Arduino, zodat deze beweegt en draait en heb de C++ code hiervoor aangepast. Daarnaast heb ik meegeholpen om de constructie in elkaar te zetten.</p>
+      <ul class="project-tags">
+        <li>Arduino</li>
+        <li>C++</li>
+        <li>Constructie</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <h2>MedixFlow</h2>
+      <p>Een webapplicatie waarmee afspraken binnen de afdeling kaakchirurgie kunnen worden geregistreerd en beheerd. De applicatie ondersteunt twee rollen: patiënt en administrator.</p>
+      <p>Ik heb meegewerkt aan het gedeelte waar de client (patiënt) afspraken kan maken via de website, inclusief het inlogsysteem.</p>
+      <ul class="project-tags">
+        <li>Node.js</li>
+        <li>Login systeem</li>
+        <li>Afspraken maken</li>
+        <li>Webapplicatie</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>2026 &copy; Karan's Portfolio</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
